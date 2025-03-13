@@ -6,6 +6,7 @@ A web-based interface for the diet optimization model using Streamlit.
 Allows users to toggle constraints and find balanced solutions.
 """
 
+import platform
 import time
 from statistics import stdev
 
@@ -14,9 +15,15 @@ import pandas as pd
 import pulp
 import streamlit as st
 
-# Set the CBC solver path to use the one installed via Homebrew
+# Set the CBC solver path based on the platform
+system = platform.system()
 if pulp.apis.COIN_CMD().available():
-    solver = pulp.apis.COIN_CMD(path="/opt/homebrew/bin/cbc")
+    if system == "Darwin":  # macOS
+        solver = pulp.apis.COIN_CMD(path="/opt/homebrew/bin/cbc")
+    elif system == "Linux":  # Linux (including Streamlit Cloud)
+        solver = pulp.apis.COIN_CMD()
+    else:  # Windows or other
+        solver = pulp.apis.COIN_CMD()
 else:
     # Fallback to default solver
     solver = pulp.apis.PULP_CBC_CMD()
