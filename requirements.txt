@@ -1,4 +1,4 @@
-# Core dependencies with minimum versions to ensure functionality
+# Core dependencies for diet-optimizer app
 streamlit>=1.43.2
 pandas>=2.0.0
 numpy>=1.23.0
@@ -9,12 +9,20 @@ matplotlib>=3.10.0
 blinker>=1.0.0
 cachetools>=5.0.0
 
-# Critical Streamlit dependencies
+# Critical Streamlit dependencies with compatibility ranges
 altair>=4.0.0,<6.0.0
 click>=7.0,<9.0
 gitpython>=3.0.7,<4.0.0,!=3.1.19
 jinja2>=3.0.0
 jsonschema>=3.0.0
+
+# Additional dependencies with compatible version ranges
+urllib3>=1.26.0,<2.1.0
+requests>=2.28.0
+protobuf>=3.20.0
+pillow>=9.0.0
+python-dateutil>=2.8.0
+pytz>=2020.1
 
 # Other project dependencies
 aiohappyeyeballs==2.5.0
@@ -55,26 +63,18 @@ openpyxl==3.1.5
 packaging==24.2
 parso==0.8.4
 pexpect==4.9.0
-pillow==11.1.0
 platformdirs==4.3.6
 prompt_toolkit==3.0.50
 propcache==0.3.0
-protobuf==5.29.3
-psutil==7.0.0
-ptyprocess==0.7.0
-pure_eval==0.2.3
 pyarrow==19.0.1
 pydeck==0.9.1
 Pygments==2.19.1
 pyinstaller==6.12.0
 pyinstaller-hooks-contrib==2025.1
 pyparsing==3.2.1
-python-dateutil==2.9.0.post0
-pytz==2025.1
 PyYAML==6.0.2
 pyzmq==26.2.1
 referencing==0.36.2
-requests==2.32.3
 rpds-py==0.23.1
 setuptools==76.0.0
 six==1.17.0
@@ -86,7 +86,6 @@ tornado==6.4.2
 traitlets==5.14.3
 typing_extensions==4.12.2
 tzdata==2025.1
-urllib3==2.3.0
 watchdog==6.0.0
 wcwidth==0.2.13
 XlsxWriter==3.2.2
