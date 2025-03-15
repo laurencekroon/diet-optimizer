@@ -762,9 +762,11 @@ class DietOptimizer:
 
 # Streamlit UI
 def main():
-    st.set_page_config(page_title="Diet Optimizer - TIAS BA GROUP 2", page_icon="🥗", layout="wide")
+    st.set_page_config(
+        page_title="DAO Diet Optimizer - TIAS BA GROUP 2", page_icon="🥗", layout="wide"
+    )
 
-    st.title("Diet Optimizer - TIAS BA GROUP 2")
+    st.title("DAO Diet Optimizer - TIAS BA GROUP 2")
     st.write("🥗 Optimize your diet based on nutritional constraints")
     st.write("👈 Select constraints and weights to optimize your diet")
     st.write("🔍 Click 'Run Optimization' to see the results")
