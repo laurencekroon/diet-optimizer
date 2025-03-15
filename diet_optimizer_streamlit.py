@@ -762,10 +762,14 @@ class DietOptimizer:
 
 # Streamlit UI
 def main():
-    st.set_page_config(page_title="Diet Optimizer", page_icon="🥗", layout="wide")
+    st.set_page_config(page_title="Diet Optimizer - TIAS BA GROUP 2", page_icon="🥗", layout="wide")
 
-    st.title("Diet Optimizer")
-    st.write("Optimize your diet based on nutritional constraints")
+    st.title("Diet Optimizer - TIAS BA GROUP 2")
+    st.write("🥗 Optimize your diet based on nutritional constraints")
+    st.write("👈 Select constraints and weights to optimize your diet")
+    st.write("🔍 Click 'Run Optimization' to see the results")
+    st.write("🔍 Click 'Find Balanced Solution' to find the best solution")
+    st.markdown("---")
 
     # Initialize the diet optimizer
     if "diet_optimizer" not in st.session_state:
